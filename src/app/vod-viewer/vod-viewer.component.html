@@ -1,0 +1,18 @@
+<iframe
+  *ngIf="safeUrl"
+  width="560"
+  height="315"
+  [src]="this.safeUrl"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+></iframe>
+<!-- TODO: do more customization in general: https://www.classynemesis.com/projects/ytembed/ 
+1. set progress bar to white
+2. etc. -->
+<h2>{{ getVodTitle() }}</h2>
+<!-- TODO: add in more details and links to:
+1. the players
+2. the characters
+3. the tournament -->

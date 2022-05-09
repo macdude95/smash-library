@@ -8,26 +8,22 @@ import { SearchResult } from 'src/app/services/search/search-result';
 })
 export class SearchResultCardComponent implements OnInit {
   @Input()
-  searchResult: SearchResult = {
-    isTeams: false,
-    tournamentName: 'tourney',
-    youtubeLink: 'link',
-    thumbnailLink: 'temp',
-  };
+  searchResult: SearchResult | undefined;
 
   constructor() {}
 
   ngOnInit(): void {}
 
   getSearchResultName(): string {
-    let playerString: string;
-    if (this.searchResult.isTeams) {
-      playerString = this.searchResult.teams![0].join(' and ') + ' vs. ';
-      this.searchResult.teams![1].join(' and ');
-    } else {
-      playerString = this.searchResult.players!.join(' vs. ');
-    }
+    // let playerString: string | undefined;
+    // if (this.searchResult?.isTeams) {
+    //   playerString = this.searchResult?.teams?[0].join(' and ') + ' vs. ';
+    //   this.searchResult.teams![1].join(' and ');
+    // } else {
+    //   playerString = this.searchResult?.players?.join(' vs. ');
+    // }
 
-    return playerString + this.searchResult.tournamentName;
+    // return playerString + ' at ' + this.searchResult?.tournamentName;
+    return 'Search Result Title';
   }
 }

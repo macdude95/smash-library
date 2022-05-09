@@ -1,4 +1,9 @@
-<h3>Enter Search!</h3>
 <mat-icon>search</mat-icon>
-<input id="search-input" [(ngModel)]="searchQuery" placeholder="Enter Search Query">
-<button (click)="performSearch()">Search</button>
+<input
+  mat-form-field
+  id="search-input"
+  [(ngModel)]="searchQuery"
+  placeholder="Search"
+/>
+<button mat-button (click)="performSearch()">Search</button>
+<!-- TODO: also make "enter" work to perform search -->

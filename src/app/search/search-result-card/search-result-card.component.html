@@ -1,3 +1,15 @@
-<img [src]="searchResult.thumbnailLink">
-<p>{{getSearchResultName()}}</p>
-
+<button
+  mat-button
+  routerLink="/vod/{{ searchResult?.vodId }}"
+  class="search-result-card my-1"
+>
+  <div class="row">
+    <div class="col-sm-4">
+      <img class="w-100" [src]="searchResult?.thumbnailLink" />
+    </div>
+    <div class="col-sm-8">
+      <h4>{{ getSearchResultName() }}</h4>
+      <p>This is a description of a video.</p>
+    </div>
+  </div>
+</button>

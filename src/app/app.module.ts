@@ -9,6 +9,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { SearchResultsComponent } from './search/search-results/search-results.component';
 import { SearchResultCardComponent } from './search/search-result-card/search-result-card.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SideBarComponent } from './side-bar/side-bar.component';
+import { VodViewerComponent } from './vod-viewer/vod-viewer.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +20,9 @@ import { SearchResultCardComponent } from './search/search-result-card/search-re
     SearchBarComponent,
     SearchResultsComponent,
     SearchResultCardComponent,
+    SideBarComponent,
+    VodViewerComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -23,6 +30,7 @@ import { SearchResultCardComponent } from './search/search-result-card/search-re
     FormsModule,
     BrowserAnimationsModule,
     MaterialModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

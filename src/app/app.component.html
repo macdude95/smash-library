@@ -1,3 +1,12 @@
-<h1>{{title}}</h1>
+<h1 routerLink="/">Smash Library</h1>
+<!-- TODO: make it more obvious that the title above is clickable -->
 <app-search-bar></app-search-bar>
-<app-search-results></app-search-results>
+<!-- TODO: put the search bar on the same line as the title -->
+<mat-drawer-container>
+  <mat-drawer mode="side" opened="true">
+    <app-side-bar></app-side-bar>
+  </mat-drawer>
+  <mat-drawer-content>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>

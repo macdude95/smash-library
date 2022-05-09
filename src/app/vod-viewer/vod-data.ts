@@ -1,8 +1,8 @@
-export interface SearchResult {
+export interface VodData {
   isTeams: boolean;
   teams?: [string[], string[]];
   players?: [string, string];
   tournamentName: string;
-  thumbnailLink: string;
+  youtubeId: string;
   vodId: string;
 }
