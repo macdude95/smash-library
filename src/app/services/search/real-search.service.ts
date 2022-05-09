@@ -10,9 +10,7 @@ import { SearchService } from './search.service';
 export class RealSearchService implements SearchService {
   searchResults: SearchResult[] = [];
 
-  // TODO: replace thhis implementation with real one from real DB
   getSearchResults(query: string): Observable<SearchResult[]> {
-    this.searchResults = MOCK_SEARCH_RESULTS;
-    return of(MOCK_SEARCH_RESULTS);
+    throw new Error('Method not implemented.');
   }
 }

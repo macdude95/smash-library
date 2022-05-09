@@ -9,7 +9,6 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'search', component: SearchResultsComponent },
   { path: 'vod/:id', component: VodViewerComponent },
-  // TODO: create tournament (at least top 8) view - maybe use this: https://github.com/Drarig29/brackets-viewer.js/issues/41
 ];
 
 @NgModule({

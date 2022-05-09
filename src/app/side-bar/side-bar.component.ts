@@ -20,7 +20,5 @@ export class SideBarComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  sideBarButtonPressed(): void {
-    // TODO: implement
-  }
+  sideBarButtonPressed(): void {}
 }

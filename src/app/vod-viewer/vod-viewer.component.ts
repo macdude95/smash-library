@@ -24,19 +24,21 @@ export class VodViewerComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    const vodId = this.route.snapshot.paramMap.get('id')!; // TODO: don't force unwrap this
-    this.vodService.getVod(vodId).subscribe((vodData) => {
-      this.vodData = vodData;
-      const embedUrl = `https://www.youtube.com/embed/${this.vodData?.youtubeId}`;
-      this.safeUrl = this.domSanitizer.bypassSecurityTrustResourceUrl(embedUrl);
-    });
+    const vodId = this.route.snapshot.paramMap.get('id');
+    if (vodId) {
+      this.vodService.getVod(vodId).subscribe((vodData) => {
+        this.vodData = vodData;
+        const embedUrl = `https://www.youtube.com/embed/${this.vodData?.youtubeId}`;
+        this.safeUrl =
+          this.domSanitizer.bypassSecurityTrustResourceUrl(embedUrl);
+      });
+    }
   }
 
   getVodTitle(): string | undefined {
     if (!this.vodData) {
       return undefined;
     }
-    // TODO: support teams as well
     const playerString = this.vodData.players?.join(' vs. ');
     return `${playerString} at ${this.vodData.tournamentName}`;
   }
