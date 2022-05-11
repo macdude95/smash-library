@@ -1,0 +1,83 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+// Generated the following palettes with: http://mcg.mbitson.com
+$my-theme-blue: (
+    50 : #e2e2e9,
+    100 : #b6b6c7,
+    200 : #8585a2,
+    300 : #54547d,
+    400 : #303061,
+    500 : #0b0b45,
+    600 : #0a0a3e,
+    700 : #080836,
+    800 : #06062e,
+    900 : #03031f,
+    A100 : #5c5cff,
+    A200 : #2929ff,
+    A400 : #0000f5,
+    A700 : #0000db,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #ffffff,
+        A200 : #ffffff,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$my-theme-red: (
+    50 : #efe2e5,
+    100 : #d8b6be,
+    200 : #be8593,
+    300 : #a35467,
+    400 : #903047,
+    500 : #7c0b26,
+    600 : #740a22,
+    700 : #69081c,
+    800 : #5f0617,
+    900 : #4c030d,
+    A100 : #ff808a,
+    A200 : #ff4d5b,
+    A400 : #ff1a2d,
+    A700 : #ff0015,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$my-primary: mat.define-palette($my-theme-blue);
+$my-accent:  mat.define-palette($my-theme-red);
+
+$my-theme: mat.define-light-theme((
+ color: (
+   primary: $my-primary,
+   accent: $my-accent,
+ ),
+));
+
+@include mat.core-theme($my-theme);
+@include mat.all-component-themes($my-theme);
