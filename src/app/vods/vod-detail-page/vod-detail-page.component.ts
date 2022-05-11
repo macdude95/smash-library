@@ -5,15 +5,15 @@ import {
   SafeUrl,
 } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
-import { VodService } from '../services/vod/vod.service';
+import { VodService } from 'src/app/services/vod/vod.service';
 import { VodData } from './vod-data';
 
 @Component({
-  selector: 'app-vod-viewer',
-  templateUrl: './vod-viewer.component.html',
-  styleUrls: ['./vod-viewer.component.scss'],
+  selector: 'app-vod-detail-page',
+  templateUrl: './vod-detail-page.component.html',
+  styleUrls: ['./vod-detail-page.component.scss'],
 })
-export class VodViewerComponent implements OnInit {
+export class VodDetailPageComponent implements OnInit {
   vodData: VodData | undefined;
   safeUrl: SafeResourceUrl | undefined;
 

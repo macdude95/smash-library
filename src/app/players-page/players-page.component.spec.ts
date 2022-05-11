@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { VodViewerComponent } from './vod-viewer.component';
+import { PlayersPageComponent } from './players-page.component';
 
-describe('VodViewerComponent', () => {
-  let component: VodViewerComponent;
-  let fixture: ComponentFixture<VodViewerComponent>;
+describe('PlayersPageComponent', () => {
+  let component: PlayersPageComponent;
+  let fixture: ComponentFixture<PlayersPageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ VodViewerComponent ]
+      declarations: [ PlayersPageComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(VodViewerComponent);
+    fixture = TestBed.createComponent(PlayersPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

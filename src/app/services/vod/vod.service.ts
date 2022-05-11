@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { delay, Observable, of } from 'rxjs';
-import { VodData } from 'src/app/vod-viewer/vod-data';
+import { VodData } from 'src/app/vods/vod-detail-page/vod-data';
 import { MOCK_VOD_DATA } from 'src/mock-data/mock-vod-data';
 
 @Injectable({

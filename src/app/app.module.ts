@@ -7,22 +7,30 @@ import { AppComponent } from './app.component';
 import { SearchBarComponent } from './search/search-bar/search-bar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
-import { SearchResultsComponent } from './search/search-results/search-results.component';
 import { SearchResultCardComponent } from './search/search-result-card/search-result-card.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SideBarComponent } from './side-bar/side-bar.component';
-import { VodViewerComponent } from './vod-viewer/vod-viewer.component';
-import { HomeComponent } from './home/home.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { TournamentsPageComponent } from './tournaments-page/tournaments-page.component';
+import { PlayersPageComponent } from './players-page/players-page.component';
+import { LivestreamsPageComponent } from './livestreams-page/livestreams-page.component';
+import { VodsPageComponent } from './vods/vods-page/vods-page.component';
+import { SearchResultsPageComponent } from './search/search-results-page/search-results-page.component';
+import { VodDetailPageComponent } from './vods/vod-detail-page/vod-detail-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchBarComponent,
-    SearchResultsComponent,
     SearchResultCardComponent,
     SideBarComponent,
-    VodViewerComponent,
-    HomeComponent,
+    VodDetailPageComponent,
+    HomePageComponent,
+    TournamentsPageComponent,
+    PlayersPageComponent,
+    LivestreamsPageComponent,
+    VodsPageComponent,
+    SearchResultsPageComponent,
   ],
   imports: [
     BrowserModule,

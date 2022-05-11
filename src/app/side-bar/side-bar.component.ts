@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { SideBarOption } from './side-bar-option';
 
 @Component({
   selector: 'app-side-bar',
@@ -6,19 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./side-bar.component.scss'],
 })
 export class SideBarComponent implements OnInit {
-  sideBarOptions = [
-    'Home',
-    'Tournaments',
-    'VODs',
-    'Livestreams',
-    'Players',
-    'Characters',
-    'Surprise Me',
+  sideBarOptions: SideBarOption[] = [
+    { title: 'Home', route: '/home' },
+    { title: 'Tournaments', route: '/tournaments' },
+    { title: 'VODs', route: '/vods' },
+    { title: 'Livestreams', route: '/livestreams' },
+    { title: 'Players', route: '/players' },
   ];
 
-  constructor() {}
+  constructor(public router: Router) {}
 
   ngOnInit(): void {}
-
-  sideBarButtonPressed(): void {}
 }
