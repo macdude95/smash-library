@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { MockSearchService } from 'src/app/services/search/mock-search.service';
+import { SearchService } from 'src/app/services/search/search.service';
 
 @Component({
   selector: 'app-search-bar',
@@ -13,7 +13,7 @@ export class SearchBarComponent implements OnInit {
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private searchService: MockSearchService
+    private searchService: SearchService
   ) {}
 
   ngOnInit(): void {
@@ -32,6 +32,8 @@ export class SearchBarComponent implements OnInit {
     });
     this.searchService
       .getSearchResults(this.searchQuery)
-      .subscribe((searchResults) => {});
+      .subscribe((searchResults) => {
+        console.log('got the search results' + searchResults[0].vodId);
+      });
   }
 }

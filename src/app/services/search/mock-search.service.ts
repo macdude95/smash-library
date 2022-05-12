@@ -10,9 +10,11 @@ import { SearchService } from './search.service';
 export class MockSearchService implements SearchService {
   searchResults: SearchResult[] = [];
   getSearchResults(query: string): Observable<SearchResult[]> {
+    console.log('yoyoyo');
     of(query)
       .pipe(delay(500))
       .subscribe(() => {
+        console.log("it's set");
         this.searchResults = MOCK_SEARCH_RESULTS; // UI doesn't delay cuz this is set immediately... hmmm i should delay this in a cleaner way i think
       });
     return of(MOCK_SEARCH_RESULTS).pipe(delay(500));
