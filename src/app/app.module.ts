@@ -17,6 +17,9 @@ import { LivestreamsPageComponent } from './livestreams-page/livestreams-page.co
 import { VodsPageComponent } from './vods/vods-page/vods-page.component';
 import { SearchResultsPageComponent } from './search/search-results-page/search-results-page.component';
 import { VodDetailPageComponent } from './vods/vod-detail-page/vod-detail-page.component';
+import { SearchService } from './services/search/search.service';
+import { serviceEnvironment } from 'src/environments/service.environment';
+import { VodService } from './services/vod/vod.service';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,16 @@ import { VodDetailPageComponent } from './vods/vod-detail-page/vod-detail-page.c
     MaterialModule,
     NgbModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: SearchService,
+      useClass: serviceEnvironment.searchService,
+    },
+    {
+      provide: VodService,
+      useClass: serviceEnvironment.vodService,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -1,4 +1,4 @@
-import { VodData } from 'src/app/vods/vod-detail-page/vod-data';
+import { VodData } from 'src/app/services/vod/vod-data';
 
 export const MOCK_VOD_DATA: VodData = {
   isTeams: false,

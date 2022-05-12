@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MockSearchService } from 'src/app/services/search/mock-search.service';
+import { SearchService } from 'src/app/services/search/search.service';
 
 @Component({
   selector: 'app-search-results-page',
@@ -7,7 +7,7 @@ import { MockSearchService } from 'src/app/services/search/mock-search.service';
   styleUrls: ['./search-results-page.component.scss'],
 })
 export class SearchResultsPageComponent implements OnInit {
-  constructor(public searchService: MockSearchService) {}
+  constructor(public searchService: SearchService) {}
 
   ngOnInit(): void {}
 }

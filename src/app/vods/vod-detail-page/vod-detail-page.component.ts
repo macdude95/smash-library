@@ -1,12 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  DomSanitizer,
-  SafeResourceUrl,
-  SafeUrl,
-} from '@angular/platform-browser';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { VodService } from 'src/app/services/vod/vod.service';
-import { VodData } from './vod-data';
+import { VodData } from '../../services/vod/vod-data';
 
 @Component({
   selector: 'app-vod-detail-page',
