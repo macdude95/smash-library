@@ -9,11 +9,11 @@ import { SideBarOption } from './side-bar-option';
 })
 export class SideBarComponent implements OnInit {
   sideBarOptions: SideBarOption[] = [
-    { title: 'Home', route: '/home' },
-    { title: 'Tournaments', route: '/tournaments' },
-    { title: 'VODs', route: '/vods' },
-    { title: 'Livestreams', route: '/livestreams' },
-    { title: 'Players', route: '/players' },
+    { title: 'Home', route: '/home', icon: 'home' },
+    { title: 'Tournaments', route: '/tournaments', icon: 'assessment' },
+    { title: 'VODs', route: '/vods', icon: 'video_library' },
+    { title: 'Livestreams', route: '/livestreams', icon: 'live_tv' },
+    { title: 'Players', route: '/players', icon: 'person' },
   ];
 
   constructor(public router: Router) {}
