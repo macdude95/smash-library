@@ -1,8 +1,14 @@
-<mat-icon>search</mat-icon>
-<input
-  mat-form-field
-  id="search-input"
-  [(ngModel)]="searchQuery"
-  placeholder="Search"
-/>
-<button mat-button (click)="performSearch()">Search</button>
+<mat-form-field appearance="outline">
+  <mat-label>Search</mat-label>
+  <input
+    matInput
+    type="search"
+    placeholder="Ex. Mang0 vs Zain at Big House"
+    [(ngModel)]="searchQuery"
+    (keyup.enter)="performSearch()"
+    autocomplete="off"
+  />
+  <button matSuffix mat-button>
+    <mat-icon (click)="performSearch()">search</mat-icon>
+  </button>
+</mat-form-field>

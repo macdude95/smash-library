@@ -26,6 +26,7 @@ import { VodService } from './services/vod/vod.service';
     AppComponent,
     SearchBarComponent,
     SearchResultCardComponent,
+    SearchResultsPageComponent,
     SideBarComponent,
     VodDetailPageComponent,
     HomePageComponent,
@@ -33,7 +34,6 @@ import { VodService } from './services/vod/vod.service';
     PlayersPageComponent,
     LivestreamsPageComponent,
     VodsPageComponent,
-    SearchResultsPageComponent,
   ],
   imports: [
     BrowserModule,

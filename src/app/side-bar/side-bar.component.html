@@ -1,10 +1,11 @@
 <div *ngFor="let sideBarOption of sideBarOptions">
   <button
     mat-button
-    class="w-100"
+    class="w-100 d-flex"
     [class.highlight]="router.url === sideBarOption.route"
     routerLink="{{ sideBarOption.route }}"
   >
+    <mat-icon>{{ sideBarOption.icon }}</mat-icon>
     {{ sideBarOption.title }}
   </button>
 </div>
