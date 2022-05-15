@@ -125,7 +125,19 @@
           }
         },
         "deploy": {
-          "builder": "angular-cli-ghpages:deploy"
+          "builder": "angular-cli-ghpages:deploy",
+          "configurations": {
+            "production": {
+              "buildTarget": "smash-library:build:production"
+            },
+            "development": {
+              "buildTarget": "smash-library:build:development"
+            },
+            "mock": {
+              "buildTarget": "smash-library:build:mock"
+            }
+          },
+          "defaultConfiguration": "mock"
         }
       }
     }
