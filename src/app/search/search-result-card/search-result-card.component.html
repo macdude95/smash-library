@@ -1,15 +1,10 @@
-<button
-  mat-button
-  routerLink="/vod/{{ searchResult?.vodId }}"
-  class="search-result-card my-1"
->
+<button mat-button routerLink="{{ getRouterLink(this.searchResult) }}">
   <div class="row">
-    <div class="col-sm-4">
-      <img class="w-100" [src]="searchResult?.thumbnailLink" />
+    <div class="col-5">
+      <img class="w-100" [src]="searchResult?.imageLink" />
     </div>
-    <div class="col-sm-8">
-      <h4>{{ getSearchResultTitle() }}</h4>
-      <p>This is a description of a video.</p>
+    <div class="col-7">
+      <span class="d-flex">{{ searchResult?.title }}</span>
     </div>
   </div>
 </button>

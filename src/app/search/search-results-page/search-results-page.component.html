@@ -1,5 +1,9 @@
-<div *ngFor="let searchResult of searchService.searchResults">
+<div
+  *ngFor="let searchResult of searchService.searchResults"
+  class="container-fluid"
+>
   <app-search-result-card
+    class="row"
     [searchResult]="searchResult"
   ></app-search-result-card>
 </div>

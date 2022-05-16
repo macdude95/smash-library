@@ -27,13 +27,10 @@ export class SearchBarComponent implements OnInit {
     if (!this.searchQuery || this.searchQuery === '') {
       return;
     }
+
     this.router.navigate(['/search'], {
       queryParams: { query: this.searchQuery },
     });
-    this.searchService
-      .getSearchResults(this.searchQuery)
-      .subscribe((searchResults) => {
-        console.log('got the search results' + searchResults[0].vodId);
-      });
+    this.searchService.getSearchResults(this.searchQuery).subscribe(() => {});
   }
 }

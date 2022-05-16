@@ -1,5 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { SearchResult } from 'src/app/services/search/search-result';
+import { PlayerSearchResult } from 'src/app/services/search/data/player-search-result';
+import { SearchResult } from 'src/app/services/search/data/search-result';
+import { VodSearchResult } from 'src/app/services/search/data/vod-search-result';
+import SearchResultsUtils from 'src/app/services/search/search-results-utils';
 
 @Component({
   selector: 'app-search-result-card',
@@ -8,13 +11,11 @@ import { SearchResult } from 'src/app/services/search/search-result';
 })
 export class SearchResultCardComponent implements OnInit {
   @Input()
-  searchResult: SearchResult | undefined;
+  searchResult!: SearchResult;
+
+  getRouterLink = SearchResultsUtils.getRouterLink;
 
   constructor() {}
 
   ngOnInit(): void {}
-
-  getSearchResultTitle(): string {
-    return 'Search Result Title';
-  }
 }
