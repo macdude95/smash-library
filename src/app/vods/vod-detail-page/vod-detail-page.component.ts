@@ -35,7 +35,14 @@ export class VodDetailPageComponent implements OnInit {
     if (!this.vodData) {
       return undefined;
     }
-    const playerString = this.vodData.players?.join(' vs. ');
+    let playerString;
+    if (this.vodData.isTeams) {
+      playerString = this.vodData.teams
+        ?.map((team) => team.join(' & '))
+        .join(' vs. ');
+    } else {
+      playerString = this.vodData.players?.join(' vs. ');
+    }
     return `${playerString} at ${this.vodData.tournamentName}`;
   }
 }
